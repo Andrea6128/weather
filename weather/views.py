@@ -19,5 +19,5 @@ def home_view(request):
 # books by id view
 def city_id_view(request, id):
     city = get_object_or_404(City, id=id)
-    context = { 'CurrentCityx': city }
+    context = { 'thiscity': city }
     return render(request, 'city.html', context)

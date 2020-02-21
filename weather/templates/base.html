@@ -22,13 +22,17 @@
     <div class="page-middle-box">
       <div class="page-main">
       {% block content %}
+      {{ city }}
+      {{ cityName }}
+      {{ city.cityName }}
+      {{ thiscity.cityName }}
       {% endblock %}
       </div>
     </div>
   </body>
   <footer>
     <p>
-      My Library version 1.0 | Built on <a href="https://www.python.org/"><img src="/static/images/python-logo.png" width="75px" style="vertical-align:middle"></a> and <a href="https://www.djangoproject.com/"><img src="/static/images/django-logo.png" width="55px" style="vertical-align:middle"></a> | Powered by <a href="https://www.postgresql.org/"><img src="/static/images/postgres-logo.png" width="75px" style="vertical-align:middle"></a>
+      MyWeatherApp 1.0 | Built on <a href="https://www.python.org/"><img src="/static/images/python-logo.png" width="75px" style="vertical-align:middle"></a> and <a href="https://www.djangoproject.com/"><img src="/static/images/django-logo.png" width="55px" style="vertical-align:middle"></a> | Powered by <a href="https://www.postgresql.org/"><img src="/static/images/postgres-logo.png" width="75px" style="vertical-align:middle"></a>
     </p>
   </footer>
   <br>
