@@ -17,7 +17,7 @@ class City(models.Model):
               ('Litoměřice', 'Litoměřice'),
              ]
 
-    # just one model
+    # just one model in db
     cityName = models.CharField(max_length=30, verbose_name=('City Name'), choices=CITIES)
 
     api_address = "http://api.openweathermap.org/data/2.5/weather?q=Prague&appid=fb7aed4ba4c5be80800a55852257ca28"
@@ -43,11 +43,12 @@ class City(models.Model):
     windSpeed = json_data["wind"]["speed"]
     print(windSpeed)
     currentTime = datetime.now()
+    # time only updates when starting server - fix that
     print(currentTime)
 
     # get city url by id for use in templates
     def getCityUrl(self):
-        return reverse('home_view', kwargs={'id': self.id})
+        return reverse('city_id_view', kwargs={'id': self.id})
 
     def __str__(self):
         return self.cityName

@@ -15,3 +15,9 @@ def home_view(request):
                 'CurrentTime': City.currentTime,
               }
     return render(request, 'home_view.html', context)
+
+# books by id view
+def city_id_view(request, id):
+    city = get_object_or_404(City, id=id)
+    context = { 'CurrentCityx': city }
+    return render(request, 'city.html', context)

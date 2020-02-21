@@ -1,8 +1,8 @@
 <nav class="nav">
-  <h3>
-    <a href='/'>City1</a>
-    <a href='/'>City2</a>
-    <a href='/'>City3</a>
-    <a href='/'>City4</a>
-  </h3>
+{% block content %}
+  <h2>Choose city:</h2>
+  {% for city in CurrentCityx %}
+    <a href="{{ city.getCityUrl }}">{{ city }}</a>
+  {% endfor %}
+{% endblock %}
 </nav>
