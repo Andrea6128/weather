@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+  <div class="page-welcome">
+    <div class="page-welcome-image">
+      <img src="/static/images/books-clipart.png">
+    </div>
+    <h2>MyWeatherApp</h2>
+    <div class="page-welcome-description">
+      <p>
+        Some app description...
+      </p>
+      <br>
+    </div>
+
+  <h2>City</h2>
+  {% for city in CurrentCity %}
+  {{ city }}
+  {% endfor %}
+
+  <h2>Current temp</h2>
+  {{ CurrentTemp }}
+
+  <h2>Weather type</h2>
+  {{ WeatherType }}
+
+  <h2>Weather desc</h2>
+  {{ WeatherDesc }}
+
+  <h2>Wind speed</h2>
+  {{ WindSpeed }}
+
+  <h2>Time</h2>
+  {{ CurrentTime }}
+
+  </div>
+
+{% endblock %}
