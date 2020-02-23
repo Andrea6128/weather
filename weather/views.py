@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404
+from django.conf import settings
 from .models import City
 from datetime import datetime
 import requests
@@ -15,7 +16,10 @@ def home_view(request):
 def city_id_view(request, id):
     city = get_object_or_404(City, id=id)
 
-    api_address = "http://api.openweathermap.org/data/2.5/weather?q=" + str(city) + "&appid=fb7aed4ba4c5be80800a55852257ca28"
+    # takes API_KEY from settings.py
+    api_key = settings.API_KEY
+    api_address = "http://api.openweathermap.org/data/2.5/weather?q=" + str(city) + "&appid=" + api_key
+
     print(api_address)
     json_data = requests.get(api_address).json()
     kelvin = json_data["main"]["temp"]
