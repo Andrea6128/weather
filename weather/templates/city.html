@@ -1,20 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
-Current temperature for {{ thisCity.cityName }}
-
-  <h2>Current temp</h2>
-  {{ thisTemp }}
-
-  <h2>Weather type</h2>
-  {{ thisWeatherType }}
-
-  <h2>Weather desc</h2>
-  {{ thisWeatherDesc }}
-
-  <h2>Wind speed</h2>
-  {{ thisWindSpeed }}
-
-  <h2>Time</h2>
-  {{ thisCurrentTime }}
-
+<div class="horizontal-line">
+  <h2>{{ thisCity.cityName }}<h2>
+  <hr>
+  <h3>Current Temperature</h3>
+  <h2>{{ thisTemp }} °C<h2>
+  <hr>
+  <h3>Weather Condition</h3>
+  <h2>{{ thisWeatherType }}</h2>
+  <hr>
+  <h3>Description</h3>
+  <h2>{{ thisWeatherDesc }}</h2>
+  <hr>
+  <h3>Wind Speed</h3>
+  <h2>{{ thisWindSpeed }} m/sec</h2>
+  <hr>
+  <h3>Current Time</h3>
+  <h2>{{ thisCurrentTime }}</h2>
+</div>
 {% endblock %}

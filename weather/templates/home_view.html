@@ -1,16 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
-  <div class="page-welcome">
-    <div class="page-welcome-image">
-      <img src="/static/images/books-clipart.png">
-    </div>
-    <h2>MyWeatherApp</h2>
-    <div class="page-welcome-description">
-      <p>
-        Some app description...
-      </p>
-      <br>
-{% include 'citylist.html' %}
-    </div>
+<div class="page-main">
+  <div class="horizontal-line">
+    {% include 'citylist.html' %}
   </div>
+</div>
 {% endblock %}
