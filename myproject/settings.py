@@ -126,4 +126,4 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # API key
-API_KEY = 'fb7aed4ba4c5be80800a55852257ca28'
+API_KEY = ''

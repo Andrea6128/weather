@@ -20,7 +20,6 @@ def city_id_view(request, id):
     api_key = settings.API_KEY
     api_address = "http://api.openweathermap.org/data/2.5/weather?q=" + str(city) + "&appid=" + api_key
 
-    print(api_address)
     json_data = requests.get(api_address).json()
     kelvin = json_data["main"]["temp"]
     celsius = round(kelvin - 273.15, 2)
@@ -37,10 +36,20 @@ def city_id_view(request, id):
     windSpeed = json_data["wind"]["speed"]
     currentTime = datetime.now()
 
+    if weatherType == "Rain":
+        bgPic = 1
+    elif weatherType == "Snow":
+        bgPic = 2
+    elif weatherType == "Clear":
+        bgPic = 3
+    elif weatherType == "Clouds":
+        bgPic = 4
+
     context = { 'thisCity': city,
                 'thisTemp': currentTemp,
                 'thisWeatherType': weatherType,
                 'thisWeatherDesc': weatherDesc,
                 'thisWindSpeed': windSpeed,
-                'thisCurrentTime': currentTime }
+                'thisCurrentTime': currentTime,
+                'thisBgPic': bgPic }
     return render(request, 'city.html', context)
