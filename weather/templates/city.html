@@ -1,25 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-this is city.html!
-{{ city }}
-
-
+Current temperature for {{ thiscity.cityName }}
 
   <h2>Current temp</h2>
-  {{ CurrentTemp }}
+  {{ thiscity.currentTemp }}
 
   <h2>Weather type</h2>
-  {{ WeatherType }}
+  {{ thiscity.weatherType }}
 
   <h2>Weather desc</h2>
-  {{ WeatherDesc }}
+  {{ thiscity.weatherDesc }}
 
   <h2>Wind speed</h2>
-  {{ WindSpeed }}
+  {{ thiscity.windSpeed }}
 
   <h2>Time</h2>
-  {{ CurrentTime }}
-
-  </div>
+  {{ thiscity.currentTime }}
 
 {% endblock %}

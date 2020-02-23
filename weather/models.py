@@ -32,23 +32,17 @@ class City(models.Model):
     for item in json_data['weather']:
         get_weather_desc = item['description']
 
-    print(cityName)
-
     currentTemp = celsius
-    print(currentTemp)
     weatherType = get_weather_type
-    print(weatherType)
     weatherDesc = get_weather_desc
-    print(weatherDesc)
     windSpeed = json_data["wind"]["speed"]
-    print(windSpeed)
     currentTime = datetime.now()
     # time only updates when starting server - fix that
-    print(currentTime)
 
     # get city url by id for use in templates
     def getCityUrl(self):
-        return reverse('city_id_view', kwargs={'id': self.id})
+        return reverse('city_detail_view', kwargs={'id': self.id})
+
 
     def __str__(self):
         return self.cityName

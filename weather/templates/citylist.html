@@ -1,0 +1,4 @@
+this is citylist.html
+{% for city in cities %}
+  <a href="{{ city.getCityUrl }}">{{ city.cityName }}</a>
+{% endfor %}

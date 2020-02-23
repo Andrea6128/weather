@@ -4,19 +4,13 @@ from .models import City
 
 # Create your views here.
 
-# homepage view
+# homepage view with list of cities and links to them
 def home_view(request):
     queryset = City.objects.all()
-    context = { 'CurrentCity': queryset,
-                'CurrentTemp': City.currentTemp,
-                'WeatherType': City.weatherType,
-                'WeatherDesc': City.weatherDesc,
-                'WindSpeed': City.windSpeed,
-                'CurrentTime': City.currentTime,
-              }
+    context = { 'cities': queryset }
     return render(request, 'home_view.html', context)
 
-# books by id view
+# city view by id for single city view
 def city_id_view(request, id):
     city = get_object_or_404(City, id=id)
     context = { 'thiscity': city }
