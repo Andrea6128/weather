@@ -43,7 +43,7 @@ class City(models.Model):
               ('Sydney', 'Sydney'),
              ]
 
-    # just one model in db
+    # we have just one model in db
     cityName = models.CharField(max_length=30, verbose_name=('City Name'), choices=CITIES)
 
     # get city url by id for use in templates

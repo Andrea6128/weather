@@ -36,6 +36,7 @@ def city_id_view(request, id):
     windSpeed = json_data["wind"]["speed"]
     currentTime = datetime.now()
 
+    # chooses a number for the weather condition background picture
     if weatherType == "Rain":
         bgPic = 1
     elif weatherType == "Snow":
