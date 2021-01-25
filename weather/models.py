@@ -41,6 +41,7 @@ class City(models.Model):
               ('New York', 'New York'),
               ('Tokyo', 'Tokyo'),
               ('Sydney', 'Sydney'),
+              ('Adamov', 'Adamov')
              ]
 
     # we have just one model in db
