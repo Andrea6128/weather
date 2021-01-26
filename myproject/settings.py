@@ -126,4 +126,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # API key
-API_KEY = 'fb7aed4ba4c5be80800a55852257ca28'
+# EDIT THIS BEFORE USE THE APP!
+API_KEY = 'your_api_key_from_openweathermap.org'

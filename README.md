@@ -14,6 +14,7 @@ simple weather web app that shows actual weather conditions according to chosen 
 - ```pip install -r requirements.txt```
 
 ## first init
+- add your API key to ```settings.py``` API_KEY string (get it here: ```https://openweathermap.org/appid#signup```)
 - migrate database ```python manage.py makemigrations``` and ```python manage.py migrate```
 - create superuser ```python manage.py createsuperuser``` with name and pwd
 - run server ```python manage.py runserver```

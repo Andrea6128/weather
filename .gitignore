@@ -1,8 +1,8 @@
 *.pyc
 __pycache__
-venv*
+*venv*
 db.sqlite3
 .DS_Store
-heslo_admin.txt
+*.txt
 todo.md
 weather_example.py
